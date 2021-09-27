@@ -101,6 +101,7 @@ addForm.addEventListener('submit', function (e) {
         document.getElementById('extras').classList.remove('active');
         form.reset();
         input_addTask.focus();
+        window.scrollTo(0, document.body.scrollHeight); /* toda vez que for add nova tarefa o scroll puxa para baixo  */
     }
 });
 
