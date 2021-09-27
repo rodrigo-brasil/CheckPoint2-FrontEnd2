@@ -29,15 +29,12 @@ function createTask(obj, id) {
                 <i class="fas fa-trash-alt"></i>
             </button>
             <div class="modal-delete-todo">
-               <div class="container-sim-nao">
-                    <p>Deseja realmente excluir?</p>
-                        <div>
-                            <button class="sim-delete" type="button" >SIM</button>
-                            <button class="nao-delete" type="button" >NÃO</button>
-                        </div> 
-                    </div>
+               <div class="container-sim-nao">                   
+                    <button class="sim-delete" type="button" >EXCLUIR</button>
+                    <button class="nao-delete" type="button" >CANCELAR</button>                   
                 </div>
-            </div>`
+            </div>
+        </div>`
 
     document.getElementById('todoContainer').appendChild(div_task);
     removeTask();

@@ -21,18 +21,29 @@
     position: absolute;
     z-index: 5;
     top: 0;
-    background-color:rgba(0, 0, 0, 0.3);
+    left: 0;
+    background-color:rgba(255, 255, 255, 0.4);
     display: none;
     align-items: center;
-    justify-content: center;
+    justify-content: center;  
     
-    
+}
+
+.sim-delete {
+    min-width: 130px;
+}
+
+.nao-delete {
+    min-width: 130px;
 }
 
 .container-sim-nao {
 
-    background-color:white;
-    min-width: 250px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background-color:transparent;
+    min-width: 230px;
     width: 20%;
     text-align: center;
     padding: 3rem 0;
@@ -271,6 +282,11 @@ header {
     overflow: hidden;
     position: relative;
     background-color: #ccc;
+    
+}
+
+.task:hover {
+    transform: scale(1.1);
 }
 
 .task .title-task {
@@ -314,7 +330,7 @@ header {
     margin-right: auto;
 }
 
-.task .options button {
+.task .options > button {
     background-color: transparent;
     padding: 0.5rem;
     margin-inline: 0.5rem;
@@ -374,6 +390,10 @@ header {
     border-radius: .5rem;
     box-shadow: 0 8px 8px -4px lightblue;
 
+}
+
+.api-card:hover {
+    transform: scale(0.85);
 }
 
 .api-card > h2{
