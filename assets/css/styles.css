@@ -17,6 +17,7 @@
   --small-font-size: .75rem;
 }
 
+/* Definição do tamanho do media query */
 @media screen and (min-width: 968px) {
   :root {
     --normal-font-size: 1rem;
@@ -30,6 +31,7 @@
   box-sizing: border-box;
 }
 
+/* Aplicação de boas práticas, fonte e reset do posicionamento do body */
 body{
   margin: 0;
   padding: 0;
@@ -45,23 +47,23 @@ a{
   text-decoration: none;
 }
 
+/* Definição do tamanho da imagem */
 img{
   max-width: 100%;
   height: auto;
 }
 
+/* Estilização da classe container que agrupa todos os cards  */
 .bd-container{
   max-width: 968px;
   width: calc(100% - 3rem);
   margin-left: 1.5rem;
   margin-right: 1.5rem;
-  
 }
-
-
 
 /*========== CARD GLASS ==========*/
 
+/* Início da estilização da div de equipe com tamanho, posição, padding, box-shadow, hover, background, border-radius */
 #equipe02 {
   margin-top:1.5rem;
 }
@@ -185,8 +187,9 @@ img{
               rgba(5,219,242,.8),
               rgba(255,255,255,.2));
 }
+/* Fim da estilização da div de equipe com tamanho, posição, padding, box-shadow, hover, background, border-radius */
 
-/*========== MEDIA QUERIES ==========*/
+/* Início da estilização da media query com tipo de display, posição, padding, imagem e z-index */
 @media screen and (min-width: 568px){
   .card__container{
     grid-template-columns: repeat(2, 1fr);

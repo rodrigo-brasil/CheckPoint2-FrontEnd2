@@ -1,21 +1,21 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400&display=swap"); */
-
-:root {
-    --bg-primary: #e5e7eb;
-    --bg-secondary: #fff;
-}
+/* Aplicação de boas práticas, fonte e reset do posicionamento do body */
 * {
     margin: 0;
     padding: 0;
     outline: 0;
     box-sizing: border-box;
-    font-family: 'Bariol Regular', sans-serif;
-                                                
+    font-family: 'Bariol Regular', sans-serif;                                            
 }
 
-/* ESTILIZAÇÃO CARD CONFIRMAÇÃO DE EXCLUSÃO */
+
+/* Definição cores do elemento raiz do documento */
+:root {
+    --bg-primary: #e5e7eb;
+    --bg-secondary: #fff;
+}
+
+/* Estilização do card confirmação de exclusão */
 .modal-delete-todo {
-    
     width: 100%;
     height: 100%;
     position: absolute;
@@ -26,19 +26,20 @@
     display: none;
     align-items: center;
     justify-content: center;  
-    
 }
 
+/* Definição do tamanho mínimo do botão sim-delete */
 .sim-delete {
     min-width: 130px;
 }
 
+/* Definição do tamanho mínimo do botão nao-delete */
 .nao-delete {
     min-width: 130px;
 }
 
+/* Definição de tamanho, background, alinhamento e border-radius do container-sim-nao */
 .container-sim-nao {
-
     align-items: center;
     justify-content: center;
     display: flex;
@@ -51,12 +52,14 @@
 
 }
 
+/* Definição de background, cor e transform do hover */
 .container-sim-nao button:hover {
     background-color:#202124;
     color: #e8eaed;
     transform: scale(1.1);
 }
 
+/* Definição de borda, border-radius, margin, padding e transição do botão */
 .container-sim-nao button {
    border: none;
    border-radius: 0.75rem;
@@ -65,9 +68,7 @@
    transition: all 0.3 ease;
 }
 
-/* ESTILIZAÇÃO CARD CONFIRMAÇÃO DE EXCLUSÃO */
-
-/* Dark mode - Início ---------------------------------------------------------------------*/
+/* Dark mode - Início */
 .btn-bk {
     font-size: 1.5rem;
     text-indent: 0.5rem;
@@ -76,45 +77,43 @@
     justify-content: center;
   }
 
-  
   input:checked {
     background-color:#202124 !important;
     border-bottom-color: #202124 !important;
     border-color:#e8eaed !important;
-  
-  
   }
+
   input {
     background-color:#e8eaed !important;
     border-bottom-color: #e8eaed !important;
     border-color:#202124 !important;
-  
   }
   
   input[type="checkbox"]:focus {
     box-shadow: none;
   }
- /* Dark mode - Fim---------------------------------------------------------------------------------------*/
+/* Dark mode - Fim */
 
+/* Definição da fonte do body */
 body {
     font-family: "Roboto", sans-serif;
 }
 
+/* Definição do tipo de cursor, borda, e decoração dos botões e tags a */
 button,
 a {
     cursor: pointer;
     border: 0;
     outline: 0;
     text-decoration: none;
-   
-
 }
 
-/* Header */
+/* Início do Header e estilização dos seus componentes */
 header {
     width: 100%;
     padding-bottom: 2rem;
 }
+
 .container {
     width: 90%;
     max-width: 1000px;
@@ -192,8 +191,9 @@ header {
     transform: scale(0.5);
     opacity: 0;
 }
+/* Fim do Header e estilização dos seus componentes */
 
-/* Parte de baixo de adicionar novas task */
+/* Início da estilização do campo que adiciona os To-Dos */
 .section-add-todo {
     position: fixed;
     width: 100%;
@@ -261,8 +261,9 @@ header {
     font-size: 0.75em;
     
 }
+/* Fim da estilização do campo que adiciona os To-Dos */
 
-/* Local onde as task ficam */
+/* Definição de tamanho, margin, padding, tipo de display da classe todo-container */
 .todo-container {
     width: 90%;
     max-width: 800px;
@@ -273,7 +274,7 @@ header {
     padding-bottom: 4.375rem;
 }
 
-/* Task cards */
+/* Definição de estilização de margin, posição, background, box-shadow e border-radius da task */
 .task {
     box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.302), 0 2px 6px 2px rgba(60, 64, 67, 0.149);
     border-radius: 0.75rem;
@@ -285,10 +286,12 @@ header {
     
 }
 
+/* Aplicação da propriedade transform no hover */
 .task:hover {
     transform: scale(1.1);
 }
 
+/* Definição de tamanho de fonte, alinhamento, tamanho e word-wrap da classe  */
 .task .title-task {
     word-wrap: break-word;
     font-size: 1.2em;
@@ -296,10 +299,12 @@ header {
     width: 100%;
 }
 
+/* Deixar a task tachada quando a tarefa estiver realizada (completed = true) */
 .tachado p {
     text-decoration: line-through;
 }
 
+/* Início da definição de estilização da classe check e task */
 .task .check {
     position: absolute;
     left: 1rem;
@@ -339,10 +344,9 @@ header {
 .task .options button i {
     font-size: 1.2em;
 }
+/* Fim da definição de estilização da classe check e task */
 
-
-/* Menu Superior */
-
+/* Estilização do menu superior com background, tipo de display, alinhamento, margin, padding e box-shadow */
 #menu-superior {
     background: rgb(58,159,180);
     background: linear-gradient(90deg, rgba(58,159,180,1) 22%, rgba(202,29,253,1) 99%);
@@ -354,21 +358,25 @@ header {
     box-shadow: 0 8px 8px -4px rgb(53, 90, 90);
 }
 
+/* Estilização da imagem do button da API */
 #api-button img{
     height: 2.5rem;
 }
 
+/* Definição de opacidade e animação do hover da API */
 #api-button img:hover{
     opacity: .5;
     transform: scale(1.2);
     animation: spin 1s ease-in;
 }
 
+/* Início e fim do tempo de duração da animação do keyframe */
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg)}
 }
 
+/* Início da estilização do botão da API */
 #api-button i {
     background-color: #fff;
     border-radius: 50%;
@@ -378,24 +386,28 @@ header {
     text-decoration: none;
 }
 
+
 #api-button i:hover {
     opacity: .75;
     transform: scale(1.2);
 }
+/* Fim da estilização do botão da API */
 
+/* Estilização da classe api-card com background, padding, margin, border-radius e box-shadow */
 .api-card {
     background-color: #ccc;
     padding: 1.5rem;
     margin: 1rem 2rem;
     border-radius: .5rem;
     box-shadow: 0 8px 8px -4px lightblue;
-
 }
 
+/* Adiciona uma animação hover ao card api */
 .api-card:hover {
     transform: scale(0.85);
 }
 
+/* Estilização do texto do card api */
 .api-card > h2{
     background-color: white;
     padding: 5px;
@@ -403,7 +415,7 @@ header {
     display: inline-block;
 }
 
-
+/* Estilização do footer com background, tamanho, padding e posição */
 footer {
     background-color: #ccc;
     width: 100%;
@@ -413,6 +425,7 @@ footer {
     bottom: 0;
 }
 
+/* Estilização da tag contida no footer com tipo de display, background, padding, fonte e transição */
 footer > a{
     display: inline-block;
   background: linear-gradient(130deg,
@@ -423,8 +436,10 @@ footer > a{
   color: var(--title-color);
   font-weight: 500;
   transition: .4s;
+  text-decoration: none;
 }
 
+/* Adiciona animação hover ao botão do footer */
 footer > a:hover{
     background: linear-gradient(130deg,
               rgba(251,251,254,1),

@@ -1,3 +1,4 @@
+/* Atribuição de variáveis */
 const div_search = document.getElementById('search');
 const input_addTask = document.getElementById('addTaskInput');
 const addForm = document.getElementById('addForm');
